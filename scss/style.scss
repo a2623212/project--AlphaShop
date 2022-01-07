@@ -77,3 +77,274 @@ input:invalid {
   width: 0px;
   background: transparent;
 }
+
+/* basic setting */
+$main-color: #2a2a2a;
+$white: #fff;
+$black: #000000;
+$light-gray: #4a4a4a;
+$free-gray: #afb1bd;
+
+$small: 375px;
+
+$sizes: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+);
+
+/* 使用@each 產出css size設定 */
+@each $prop, $abbrev in (width: w, height: h) {
+  @each $num, $val in $sizes {
+    .#{$abbrev}-#{$num} {
+      #{$prop}: $val;
+    }
+  }
+}
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: (
+    $spacer * 0.25,
+  ),
+  2: (
+    $spacer * 0.5,
+  ),
+  3: (
+    $spacer * 0.75,
+  ),
+  4: $spacer,
+  5: (
+    $spacer * 1.25,
+  ),
+  6: (
+    $spacer * 1.5,
+  ),
+  7: (
+    $spacer * 1.75,
+  ),
+  8: (
+    $spacer * 2,
+  ),
+);
+
+/* 使用@each 產出css spacer設定 */
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $num, $val in $spacers {
+    .#{$abbrev}-#{$num} {
+      #{$prop}: $val;
+    }
+    .#{$abbrev}t-#{$num} {
+      #{$prop}-top: $val;
+    }
+    .#{$abbrev}r-#{$num} {
+      #{$prop}-right: $val;
+    }
+    .#{$abbrev}b-#{$num} {
+      #{$prop}-bottom: $val;
+    }
+    .#{$abbrev}l-#{$num} {
+      #{$prop}-left: $val;
+    }
+    .#{$abbrev}x-#{$num} {
+      #{$prop}-left: $val;
+      #{$prop}-right: $val;
+    }
+    .#{$abbrev}y-#{$num} {
+      #{$prop}-top: $val;
+      #{$prop}-bottom: $val;
+    }
+  }
+}
+
+%input-style {
+  height: 40px;
+  border: 1px solid $light-gray;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 0.8rem;
+  &:hover,
+  &:focus {
+    border-color: $main-color;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.d-inline-block {
+  display: inline-blockt;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.align-content-start {
+  align-content: flex-start;
+}
+
+.align-content-end {
+  align-content: flex-end;
+}
+
+.align-content-center {
+  align-content: center;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+html {
+  font-size: 16px;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: $white;
+  color: $main-color;
+  font-family: "Noto Sans TC";
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+// custom style
+// scss function
+@mixin getStepNums($num) {
+  @for $i from 1 through $num {
+    &:nth-child(#{$i}) .circle-container::after {
+      content: "#{$i}";
+    }
+  }
+}
+// mobile
+nav {
+  height: 56px;
+  width: 100%;
+}
+
+#main-title {
+  font-size: 1.5rem;
+  color: $main-color;
+}
+
+// stepper
+#main-content {
+  &__form {
+    margin-top: 24px;
+    &__step-control {
+      height: 2rem;
+      .stepper-container {
+        display: flex;
+        justify-content: space-between;
+        .step {
+          flex: 1;
+          position: relative;
+          border: 1px solid $black;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          @include getStepNums(3);
+          .circle-container {
+            width: 32px;
+            height: 32px;
+            border: 1px solid $free-gray;
+            border-radius: 50%;
+            color: $free-gray;
+          }
+          .circle--2 {
+            align-self: center;
+          }
+          .circle--3 {
+            align-self: flex-end;
+          }
+
+          &.checked,
+          &.active {
+            .circle-container {
+              background-color: #333333;
+              color: $white;
+            }
+          }
+
+          &.checked .circle-container::after {
+            content: "\2714";
+          }
+
+          .label-container {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// form
+#main-content__form__form-panel {
+  margin-top: 24px;
+}
