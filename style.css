@@ -1,0 +1,18 @@
+.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.products h2 {
+  font-size: 36px;
+}
+
+.products h2 span {
+  font-size: 16px;
+}
+
+.products a {
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */
