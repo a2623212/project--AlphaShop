@@ -35,76 +35,96 @@
               <div class="form-part">
                 <h4>寄送地址</h4>
                 <div class="form-part__address">
-                <div class="form-group">
-                  <label for="title">稱謂</label>
-                  <select name="title" id="title">
-                    <option value="1">先生</option>
-                    <option value="2">小姐</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="name">姓名</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="name"
-                    id="name"
-                    placeholder="請輸入姓名"
-                    required
-                  />
-                  <div class="invalid-feedback">This field is required.</div>
-                  <div class="valid-feedback">Good.</div>
-                </div>
-                <div class="form-group">
-                  <label for="phone">電話</label>
-                  <input
-                    type="tel"
-                    class="form-control"
-                    name="phone"
-                    id="phone"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                    placeholder="請輸入行動電話"
-                    required
-                  />
-                  <div class="invalid-feedback">This field is required.</div>
-                  <div class="valid-feedback">Good.</div>
-                </div>
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    name="email"
-                    id="email"
-                    placeholder="請輸入電子郵件"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="city">縣市</label>
-                  <input
-                    list="city-of-taiwan"
-                    class="form-control"
-                    name="city"
-                    id="city"
-                  />
-                  <datalist id="city-of-taiwan"></datalist>
-                </div>
-                <div class="form-group">
-                  <label for="address">地址</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="address"
-                    id="address"
-                    placeholder="請輸入地址 "
-                    required
-                  />
-                  <div class="invalid-feedback">This field is required.</div>
-                  <div class="valid-feedback">Good.</div>
+                  <div class="form-group">
+                    <label for="title">稱謂</label>
+                    <select name="title" id="title">
+                      <option value="1">先生</option>
+                      <option value="2">小姐</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="name"
+                      id="name"
+                      placeholder="請輸入姓名"
+                      required
+                    />
+                    <div class="invalid-feedback">This field is required.</div>
+                    <div class="valid-feedback">Good.</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">電話</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      name="phone"
+                      id="phone"
+                      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                      placeholder="請輸入行動電話"
+                      required
+                    />
+                    <div class="invalid-feedback">This field is required.</div>
+                    <div class="valid-feedback">Good.</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email"
+                      placeholder="請輸入電子郵件"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="city">縣市</label>
+                    <input
+                      list="city-of-taiwan"
+                      class="form-control"
+                      name="city"
+                      id="city"
+                    />
+                    <datalist id="city-of-taiwan"></datalist>
+                  </div>
+                  <div class="form-group">
+                    <label for="address">地址</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="address"
+                      id="address"
+                      placeholder="請輸入地址 "
+                      required
+                    />
+                    <div class="invalid-feedback">This field is required.</div>
+                    <div class="valid-feedback">Good.</div>
+                  </div>
                 </div>
               </div>
-              <div class="form-part">
 
+              <div class="form-part">
+                <h4>運送方式</h4>
+                <div class="form-part__delivery">
+                  <div class="form-part__delivery--standard">
+                    <input type="checkbox" name="s-delivery" id="s-delivery" />
+                    <label for="s-delivery">
+                      <span class="delivery-type">標準運送</span>
+                      <span class="delivery-time">約 3~7 個工作天</span>
+                    </label>
+                    <span class="delivery-fee">免費</span>
+                  </div>
+                  <div class="form-part__delivery--DHL">
+                    <input type="checkbox" name="d-delivery" id="d-delivery" />
+                    <label for="d-delivery">
+                      <span class="delivery-type">DHL 貨運</span>
+                      <span class="delivery-time">48 小時內送到</span>
+                    </label>
+                    <span class="delivery-fee">$500</span>
+                  </div>
+                </div>
               </div>
               <div class="form-part"></div>
             </form>
