@@ -104,7 +104,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="form-part">
                 <h4>運送方式</h4>
                 <div class="form-part__delivery">
@@ -126,8 +125,106 @@
                   </div>
                 </div>
               </div>
-              <div class="form-part"></div>
+              <div class="form-part">
+                <h4>付款資訊</h4>
+                <div class="form-part__payment">
+                  <div class="form-group">
+                    <label for="credit-name">持卡人姓名</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="credit-name"
+                      id="credit-name"
+                      placeholder="John Done"
+                      required
+                    />
+                    <div class="invalid-feedback">This field is required.</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="credit-number">卡號</label>
+                    <input
+                      type="tel"
+                      name="credit-number"
+                      id="credit-number"
+                      placeholder="1111 2222 3333 4444"
+                      pattern="[0-9\s]{13,19}"
+                      maxlength="19"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="credit-expire">有效期限</label>
+                    <input
+                      type="tel"
+                      name="credit-expire"
+                      id="credit-expire"
+                      placeholder="MM/YY"
+                      pattern="[0-9\s]{13,19}"
+                      maxlength="5"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="credit-cvc">CVC / CCV</label>
+                    <input
+                      type="tel"
+                      name="credit-cvc"
+                      id="credit-cvc"
+                      placeholder="123"
+                      pattern="[0-9\s]{13,19}"
+                      maxlength="3"
+                    />
+                  </div>
+                </div>
+              </div>
             </form>
+          </div>
+        </div>
+        <div id="main-content__cart">
+          <div class="title cart-container">
+            <h4>購物籃</h4>
+          </div>
+          <div class="items-panel cart-container">
+            <div class="item">
+              <img
+                src="images/Block@picture1.png"
+                alt="item picture"
+                class="picture"
+              />
+              <div class="info">
+                <p class="info__product">破壞補丁修身牛仔褲</p>
+                <div class="info__count">
+                  <span class="minus"><i></i></span>
+                  <span class="info__count--number">1</span>
+                  <span class="minus"><i></i></span>
+                </div>
+              </div>
+              <div class="fee">$3,999</div>
+            </div>
+            <div class="item">
+              <img
+                src="images/Block@picture2.png"
+                alt="item picture"
+                class="picture"
+              />
+              <div class="info">
+                <p class="info__product">刷色直筒牛仔褲</p>
+                <div class="info__count">
+                  <span class="minus"><i></i></span>
+                  <span class="info__count--number">1</span>
+                  <span class="minus"><i></i></span>
+                </div>
+              </div>
+              <div class="fee">$3,999</div>
+            </div>
+          </div>
+          <div class="fee-panel cart-container">
+            <div class="fee-panel__delivery">
+              <h5>運費</h5>
+              <span class="fee-panel__delivery--fee">免費</span>
+            </div>
+            <div class="fee-panel__total">
+              <h5>小計</h5>
+              <span class="fee-panel__total--fee">000</span>
+            </div>
           </div>
         </div>
       </div>
