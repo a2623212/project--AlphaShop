@@ -83,7 +83,8 @@ $main-color: #2a2a2a;
 $white: #fff;
 $black: #000000;
 $light-gray: #4a4a4a;
-$free-gray: #afb1bd;
+$stepper-gray: #afb1bd;
+$label-title: #808080;
 
 $small: 375px;
 
@@ -312,9 +313,9 @@ nav {
           .circle-container {
             width: 32px;
             height: 32px;
-            border: 1px solid $free-gray;
+            border: 1px solid $stepper-gray;
             border-radius: 50%;
-            color: $free-gray;
+            color: $stepper-gray;
           }
           .circle--2 {
             align-self: center;
@@ -346,5 +347,30 @@ nav {
 
 // form
 #main-content__form__form-panel {
-  margin-top: 24px;
+  margin-top: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  .form-part {
+    margin-bottom: 2rem;
+    h4 {
+      font-size: 24px;
+      color: $main-color;
+    }
+    .form-group {
+      margin-top: 24px;
+      > label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 12px;
+        font-weight: 700;
+        color: $label-title;
+      }
+      input {
+        @extend %input-style;
+      }
+    }
+  }
 }
