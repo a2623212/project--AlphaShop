@@ -269,7 +269,7 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 92%;
   margin: 0 auto;
 }
 
@@ -305,7 +305,6 @@ nav {
         .step {
           flex: 1;
           position: relative;
-          border: 1px solid $black;
           display: flex;
           flex-direction: column;
           text-align: center;
@@ -339,6 +338,15 @@ nav {
           .label-container {
             display: none;
           }
+
+          .connect-line {
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: $black;
+            position: absolute;
+            bottom: 16px;
+          }
         }
       }
     }
@@ -353,11 +361,14 @@ nav {
 form {
   display: flex;
   flex-direction: column;
+  h4 {
+    font-size: 24px;
+    color: $main-color;
+  }
   .form-part {
     margin-bottom: 2rem;
-    h4 {
-      font-size: 24px;
-      color: $main-color;
+    .form-row {
+      display: flex;
     }
     .form-group {
       margin-top: 24px;
@@ -371,6 +382,43 @@ form {
       input {
         @extend %input-style;
       }
+      select {
+        @extend %input-style;
+      }
+      #title {
+        width: 133px;
+      }
+      #name {
+        width: 183px;
+      }
+      #phone,
+      #email,
+      #city,
+      #address {
+        width: 100%;
+      }
     }
   }
+}
+
+.invalid-feedback,
+.valid-feedback {
+  display: none;
+  font-size: 0.8em;
+}
+
+.invalid-feedback {
+  color: red;
+}
+
+.valid-feedback {
+  color: green;
+}
+
+form.was-validated .form-control:invalid ~ .invalid-feedback {
+  display: initial;
+}
+
+form.was-validated .form-control:valid ~ .valid-feedback {
+  display: initial;
 }
