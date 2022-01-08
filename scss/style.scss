@@ -452,6 +452,22 @@ form {
   }
 }
 
+.form-part__payment {
+  #credit-name,
+  #credit-number {
+    width: 100%;
+  }
+  > .form-row {
+    :nth-child(1) {
+      margin-right: 30px;
+    }
+  }
+  #credit-expire,
+  #credit-cvc {
+    width: 100%;
+  }
+}
+
 // form validity check
 .invalid-feedback,
 .valid-feedback {

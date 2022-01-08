@@ -999,6 +999,20 @@ form .form-part .form-group #address {
   font-weight: 700;
 }
 
+.form-part__payment #credit-name,
+.form-part__payment #credit-number {
+  width: 100%;
+}
+
+.form-part__payment > .form-row :nth-child(1) {
+  margin-right: 30px;
+}
+
+.form-part__payment #credit-expire,
+.form-part__payment #credit-cvc {
+  width: 100%;
+}
+
 .invalid-feedback,
 .valid-feedback {
   display: none;
