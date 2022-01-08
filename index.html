@@ -120,21 +120,21 @@
               <div class="form-part">
                 <h4>運送方式</h4>
                 <div class="form-part__delivery">
-                  <div class="form-part__delivery--standard">
-                    <input type="checkbox" name="s-delivery" id="s-delivery" />
+                  <div class="form-part__delivery__type">
+                    <input name="s-delivery" id="s-delivery" type="radio" value="standard"/>
                     <label for="s-delivery">
-                      <span class="delivery-type">標準運送</span>
-                      <span class="delivery-time">約 3~7 個工作天</span>
+                      <span class="delivery-type d-block">標準運送</span>
+                      <span class="delivery-time d-block">約 3~7 個工作天</span>
+                      <span class="delivery-fee d-block">免費</span>
                     </label>
-                    <span class="delivery-fee">免費</span>
                   </div>
-                  <div class="form-part__delivery--DHL">
-                    <input type="checkbox" name="d-delivery" id="d-delivery" />
+                  <div class="form-part__delivery__type">
+                    <input name="d-delivery" id="d-delivery" type="radio" value="DHL"/>
                     <label for="d-delivery">
-                      <span class="delivery-type">DHL 貨運</span>
-                      <span class="delivery-time">48 小時內送到</span>
+                      <span class="delivery-type d-block">DHL 貨運</span>
+                      <span class="delivery-time d-block">48 小時內送到</span>
+                      <span class="delivery-fee d-block">$500</span>
                     </label>
-                    <span class="delivery-fee">$500</span>
                   </div>
                 </div>
               </div>

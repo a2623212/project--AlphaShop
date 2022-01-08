@@ -401,6 +401,58 @@ form {
   }
 }
 
+.form-part__delivery {
+  &__type {
+    border: 1px solid #f0f0f5;
+    border-radius: 4px;
+    width: 100%;
+    height: 60px;
+    margin-top: 24px;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+
+    input [type="radio"] {
+      -webkit-appearance: none;
+      border-radius: 50%;
+      cursor: pointer;
+      &:checked {
+        box-shadow: inset 0 0 0 5px $black;
+      }
+    }
+
+    > label {
+      height: 100%;
+      width: 100%;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      position: relative;
+      .delivery-type {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .delivery-time {
+        font-size: 12px;
+      }
+      .delivery-fee {
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        font-size: 12px;
+      }
+    }
+  }
+  #d-delivery {
+    ~ label {
+      .delivery-type {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+// form validity check
 .invalid-feedback,
 .valid-feedback {
   display: none;
