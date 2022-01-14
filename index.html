@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <nav class="container header"></nav>
+    <nav class="container header">
+      <h1>ALPHA Shop</h1>
+    </nav>
     <main class="container">
       <h2 id="main-title">結帳</h2>
       <div id="main-content">
@@ -22,12 +24,10 @@
               <div class="step active">
                 <div class="circle-container circle--2"></div>
                 <div class="label-container">運送方式</div>
-                <span class="connect-line"></span>
               </div>
               <div class="step">
                 <div class="circle-container circle--3"></div>
                 <div class="label-container">付款資訊</div>
-                <span class="connect-line"></span>
               </div>
             </div>
           </div>
@@ -37,7 +37,7 @@
                 <h4>寄送地址</h4>
                 <div class="form-part__address">
                   <div class="form-row">
-                    <div class="form-group">
+                    <div class="form-group select-wrapper">
                       <label for="title">稱謂</label>
                       <select name="title" id="title">
                         <option value="1">先生</option>
@@ -94,12 +94,25 @@
                     />
                     <datalist id="city-of-taiwan">
                       <datalist id="city-of-taiwan">
+                        <option value="基隆市"></option>
                         <option value="台北市"></option>
                         <option value="新北市"></option>
                         <option value="桃園市"></option>
+                        <option value="新竹縣"></option>
+                        <option value="新竹市"></option>
+                        <option value="苗栗縣"></option>
                         <option value="台中市"></option>
+                        <option value="彰化縣"></option>
+                        <option value="雲林縣"></option>
+                        <option value="嘉義縣"></option>
                         <option value="台南市"></option>
                         <option value="高雄市"></option>
+                        <option value="屏東縣"></option>
+                        <option value="台東縣"></option>
+                        <option value="花蓮縣"></option>
+                        <option value="澎湖縣"></option>
+                        <option value="金門縣"></option>
+                        <option value="連江縣"></option>
                       </datalist>
                     </datalist>
                   </div>
@@ -118,15 +131,15 @@
                   </div>
                 </div>
               </div>
-              <div class="form-part">
+              <div class="form-part d-none">
                 <h4>運送方式</h4>
                 <div class="form-part__delivery">
                   <div class="form-part__delivery__type">
                     <input
-                      name="s-delivery"
+                      name="delivery"
                       id="s-delivery"
                       type="radio"
-                      value="standard"
+                      value="0"
                     />
                     <label for="s-delivery">
                       <span class="delivery-type d-block">標準運送</span>
@@ -136,10 +149,10 @@
                   </div>
                   <div class="form-part__delivery__type">
                     <input
-                      name="d-delivery"
+                      name="delivery"
                       id="d-delivery"
                       type="radio"
-                      value="DHL"
+                      value="500"
                     />
                     <label for="d-delivery">
                       <span class="delivery-type d-block">DHL 貨運</span>
@@ -149,7 +162,7 @@
                   </div>
                 </div>
               </div>
-              <div class="form-part">
+              <div class="form-part d-none">
                 <h4>付款資訊</h4>
                 <div class="form-part__payment">
                   <div class="form-group">
