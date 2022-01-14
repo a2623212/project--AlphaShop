@@ -572,3 +572,45 @@ form.was-validated .form-control:valid ~ .valid-feedback {
     }
   }
 }
+
+// button
+#btn-control {
+  margin-top: 1.2rem;
+  position: relative;
+  button {
+    display: block;
+    border-radius: 8px;
+    height: 46px;
+    width: 10rem;
+    text-align: center;
+  }
+  .btn-previous {
+    text-align: start;
+  }
+  .btn-next {
+    width: 100%;
+    background-color: #f67599;
+    color: $white;
+  }
+  .btn-done {
+    background-color: #f67599;
+    color: $white;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  span {
+    line-height: 46px;
+  }
+
+  .arrow-previous::before {
+    content: "\2190";
+    font-size: 20px;
+    margin-right: 1rem;
+  }
+  .arrow-next::after {
+    content: "\2192";
+    font-size: 20px;
+    margin-left: 1rem;
+  }
+}
