@@ -44,7 +44,7 @@
                         <option value="2">小姐</option>
                       </select>
                     </div>
-                    <div class="form-group ml-6">
+                    <div class="form-group">
                       <label for="name">姓名</label>
                       <input
                         type="text"
@@ -60,74 +60,82 @@
                       <div class="valid-feedback">Good.</div>
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label for="phone">電話</label>
-                    <input
-                      type="tel"
-                      class="form-control"
-                      name="phone"
-                      id="phone"
-                      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                      placeholder="請輸入行動電話"
-                      required
-                    />
-                    <div class="invalid-feedback">This field is required.</div>
-                    <div class="valid-feedback">Good.</div>
+                  <div class="form-row-2">
+                    <div class="form-group">
+                      <label for="phone">電話</label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        name="phone"
+                        id="phone"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        placeholder="請輸入行動電話"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        This field is required.
+                      </div>
+                      <div class="valid-feedback">Good.</div>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        id="email"
+                        placeholder="請輸入電子郵件"
+                      />
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      placeholder="請輸入電子郵件"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="city">縣市</label>
-                    <input
-                      list="city-of-taiwan"
-                      class="form-control"
-                      name="city"
-                      id="city"
-                    />
-                    <datalist id="city-of-taiwan">
+                  <div class="form-row-3">
+                    <div class="form-group">
+                      <label for="city">縣市</label>
+                      <input
+                        list="city-of-taiwan"
+                        class="form-control"
+                        name="city"
+                        id="city"
+                      />
                       <datalist id="city-of-taiwan">
-                        <option value="基隆市"></option>
-                        <option value="台北市"></option>
-                        <option value="新北市"></option>
-                        <option value="桃園市"></option>
-                        <option value="新竹縣"></option>
-                        <option value="新竹市"></option>
-                        <option value="苗栗縣"></option>
-                        <option value="台中市"></option>
-                        <option value="彰化縣"></option>
-                        <option value="雲林縣"></option>
-                        <option value="嘉義縣"></option>
-                        <option value="台南市"></option>
-                        <option value="高雄市"></option>
-                        <option value="屏東縣"></option>
-                        <option value="台東縣"></option>
-                        <option value="花蓮縣"></option>
-                        <option value="澎湖縣"></option>
-                        <option value="金門縣"></option>
-                        <option value="連江縣"></option>
+                        <datalist id="city-of-taiwan">
+                          <option value="基隆市"></option>
+                          <option value="台北市"></option>
+                          <option value="新北市"></option>
+                          <option value="桃園市"></option>
+                          <option value="新竹縣"></option>
+                          <option value="新竹市"></option>
+                          <option value="苗栗縣"></option>
+                          <option value="台中市"></option>
+                          <option value="彰化縣"></option>
+                          <option value="雲林縣"></option>
+                          <option value="嘉義縣"></option>
+                          <option value="台南市"></option>
+                          <option value="高雄市"></option>
+                          <option value="屏東縣"></option>
+                          <option value="台東縣"></option>
+                          <option value="花蓮縣"></option>
+                          <option value="澎湖縣"></option>
+                          <option value="金門縣"></option>
+                          <option value="連江縣"></option>
+                        </datalist>
                       </datalist>
-                    </datalist>
-                  </div>
-                  <div class="form-part__address__group2 form-group">
-                    <label for="address">地址</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="address"
-                      id="address"
-                      placeholder="請輸入地址 "
-                      required
-                    />
-                    <div class="invalid-feedback">This field is required.</div>
-                    <div class="valid-feedback">Good.</div>
+                    </div>
+                    <div class="form-part__address__group2 form-group">
+                      <label for="address">地址</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="address"
+                        id="address"
+                        placeholder="請輸入地址 "
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        This field is required.
+                      </div>
+                      <div class="valid-feedback">Good.</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -223,62 +231,7 @@
           </div>
           <div class="cart-container">
             <div class="items-panel">
-              <div class="item">
-                <img
-                  src="images/Block@picture1.png"
-                  alt="item picture"
-                  class="picture"
-                />
-                <div class="info">
-                  <p class="info__product">破壞補丁修身牛仔褲</p>
-                  <div class="info__count">
-                    <div class="minus">
-                      <img
-                        src="images/icon/outline_remove_black_24dp.png"
-                        alt=""
-                        class="icon minus__icon"
-                      />
-                    </div>
-                    <div class="info__count--number">1</div>
-                    <div class="plus">
-                      <img
-                        src="images/icon/outline_add_black_24dp.png"
-                        alt=""
-                        class="icon plus__icon"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="fee">$3,999</div>
-              </div>
-              <div class="item">
-                <img
-                  src="images/Block@picture2.png"
-                  alt="item picture"
-                  class="picture"
-                />
-                <div class="info">
-                  <p class="info__product">刷色直筒牛仔褲</p>
-                  <div class="info__count">
-                    <div class="minus">
-                      <img
-                        src="images/icon/outline_remove_black_24dp.png"
-                        alt=""
-                        class="icon minus__icon"
-                      />
-                    </div>
-                    <div class="info__count--number">1</div>
-                    <div class="plus">
-                      <img
-                        src="images/icon/outline_add_black_24dp.png"
-                        alt=""
-                        class="icon plus__icon"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="fee">$1,299</div>
-              </div>
+              <!-- use renderCartItem()  -->
             </div>
 
             <div class="fee-panel__delivery">

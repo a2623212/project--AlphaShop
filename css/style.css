@@ -802,6 +802,51 @@ nav {
 
 nav h1 {
   font-size: 1rem;
+  position: relative;
+}
+
+nav h1::after {
+  content: "D";
+  color: #fff;
+  font-size: 12px;
+  height: 1rem;
+  width: 1rem;
+  background-color: #2a2a2a;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  right: 1rem;
+}
+
+#main-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: " form  form form form form form form form form form form form" " cart  cart cart cart cart cart cart cart cart cart cart cart" " controlBtn controlBtn controlBtn controlBtn controlBtn controlBtn controlBtn controlBtn controlBtn controlBtn controlBtn controlBtn ";
+}
+
+#main-content #main-content__form {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: form;
+}
+
+#main-content #main-content__cart {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: cart;
+}
+
+#main-content #btn-control {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: controlBtn;
 }
 
 #main-title {
@@ -944,6 +989,10 @@ form .form-part .form-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
 }
 
 form .form-part .form-group {
@@ -965,12 +1014,13 @@ form .form-part .form-group select {
 }
 
 form .form-part .form-group #title {
-  width: 133px;
+  display: inline-block;
+  width: 100%;
   background-color: transparent;
 }
 
 form .form-part .form-group #name {
-  width: 183px;
+  width: 100%;
 }
 
 form .form-part .form-group #phone,
@@ -982,6 +1032,7 @@ form .form-part .form-group #address {
 
 form .form-part .select-wrapper {
   position: relative;
+  width: 40%;
   z-index: 0;
 }
 
@@ -1245,5 +1296,12 @@ form.was-validated .form-control:valid ~ .valid-feedback {
   content: "\2192";
   font-size: 20px;
   margin-left: 1rem;
+}
+
+@media screen and (min-width: 375px) {
+  #main-content {
+    grid-column-gap: 4rem;
+        grid-template-areas: " form  form form form form form  cart  cart cart cart cart " " form  form form form form form  cart  cart cart cart cart " "controlBtn controlBtn controlBtn controlBtn controlBtn controlBtn cart cart cart cart cart";
+  }
 }
 /*# sourceMappingURL=style.css.map */

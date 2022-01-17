@@ -291,9 +291,40 @@ nav {
   padding: 1rem;
   h1 {
     font-size: 1rem;
+    position: relative;
+    // 暫時的dark model button
+    &::after {
+      content: "D";
+      color: $white;
+      font-size: 12px;
+      height: 1rem;
+      width: 1rem;
+      background-color: $main-color;
+      border-radius: 50%;
+      position: absolute;
+      top: 25%;
+      right: 1rem;
+    }
   }
 }
-
+#main-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    " form  form form form form form form form form form form form"
+    " cart  cart cart cart cart cart cart cart cart cart cart cart"
+    " controlBtn controlBtn controlBtn controlBtn controlBtn controlBtn controlBtn controlBtn controlBtn controlBtn controlBtn controlBtn ";
+  #main-content__form {
+    grid-area: form;
+  }
+  #main-content__cart {
+    grid-area: cart;
+  }
+  #btn-control {
+    grid-area: controlBtn;
+  }
+}
 #main-title {
   font-size: 1.5rem;
   color: $main-color;
@@ -397,7 +428,10 @@ form {
     margin-bottom: 2rem;
     .form-row {
       display: flex;
+      justify-content: space-between;
+      width: 100%;
     }
+
     .form-group {
       margin-top: 24px;
       > label {
@@ -418,11 +452,13 @@ form {
         width: 100%;
       }
       #title {
-        width: 133px;
+        display: inline-block;
+        width: 100%;
         background-color: transparent;
       }
+
       #name {
-        width: 183px;
+        width: 100%;
       }
       #phone,
       #email,
@@ -433,6 +469,7 @@ form {
     }
     .select-wrapper {
       position: relative;
+      width: 40%;
       z-index: 0;
       &::after {
         content: "";
@@ -663,5 +700,16 @@ form.was-validated .form-control:valid ~ .valid-feedback {
     content: "\2192";
     font-size: 20px;
     margin-left: 1rem;
+  }
+}
+
+// computer
+@media screen and (min-width: $small) {
+  #main-content {
+    grid-column-gap: 4rem;
+    grid-template-areas:
+      " form  form form form form form  cart  cart cart cart cart "
+      " form  form form form form form  cart  cart cart cart cart "
+      "controlBtn controlBtn controlBtn controlBtn controlBtn controlBtn cart cart cart cart cart";
   }
 }
