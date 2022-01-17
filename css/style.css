@@ -805,17 +805,16 @@ nav h1 {
   position: relative;
 }
 
-nav h1::after {
-  content: "D";
-  color: #fff;
-  font-size: 12px;
-  height: 1rem;
-  width: 1rem;
-  background-color: #2a2a2a;
-  border-radius: 50%;
-  position: absolute;
-  top: 25%;
-  right: 1rem;
+nav .header__darkmode__label {
+  background: var(--darkmode-toggle-url);
+  background-size: 100% 100%;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+nav .header__darkmode__input {
+  display: none;
 }
 
 #main-content {
@@ -997,6 +996,7 @@ form .form-part .form-row {
 
 form .form-part .form-group {
   margin-top: 24px;
+  width: 100%;
 }
 
 form .form-part .form-group > label {
@@ -1032,7 +1032,7 @@ form .form-part .form-group #address {
 
 form .form-part .select-wrapper {
   position: relative;
-  width: 40%;
+  width: 35%;
   z-index: 0;
 }
 
@@ -1045,6 +1045,10 @@ form .form-part .select-wrapper::after {
   bottom: 1rem;
   right: 8px;
   z-index: -1;
+}
+
+form .form-part .form-group-name {
+  width: 55%;
 }
 
 .form-part__delivery__type {
@@ -1128,28 +1132,6 @@ form .form-part .select-wrapper::after {
 .form-part__payment #credit-expire,
 .form-part__payment #credit-cvc {
   width: 100%;
-}
-
-.invalid-feedback,
-.valid-feedback {
-  display: none;
-  font-size: 0.8em;
-}
-
-.invalid-feedback {
-  color: red;
-}
-
-.valid-feedback {
-  color: green;
-}
-
-form.was-validated .form-control:invalid ~ .invalid-feedback {
-  display: initial;
-}
-
-form.was-validated .form-control:valid ~ .valid-feedback {
-  display: initial;
 }
 
 #main-content__cart {
@@ -1378,6 +1360,7 @@ form.was-validated .form-control:valid ~ .valid-feedback {
     grid-column-end: 3;
   }
   form .form-part .form-part__address .form-row .form-group-name {
+    width: 100%;
     -ms-grid-column: 3;
         grid-column-start: 3;
     grid-column-end: 7;

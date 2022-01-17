@@ -292,19 +292,16 @@ nav {
   h1 {
     font-size: 1rem;
     position: relative;
-    // 暫時的dark model button
-    &::after {
-      content: "D";
-      color: $white;
-      font-size: 12px;
-      height: 1rem;
-      width: 1rem;
-      background-color: $main-color;
-      border-radius: 50%;
-      position: absolute;
-      top: 25%;
-      right: 1rem;
-    }
+  }
+  .header__darkmode__label {
+    background: var(--darkmode-toggle-url);
+    background-size: 100% 100%;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+  }
+  .header__darkmode__input {
+    display: none;
   }
 }
 #main-content {
@@ -434,6 +431,7 @@ form {
 
     .form-group {
       margin-top: 24px;
+      width: 100%;
       > label {
         display: block;
         margin-bottom: 0.5rem;
@@ -469,7 +467,7 @@ form {
     }
     .select-wrapper {
       position: relative;
-      width: 40%;
+      width: 35%;
       z-index: 0;
       &::after {
         content: "";
@@ -481,6 +479,9 @@ form {
         right: 8px;
         z-index: -1;
       }
+    }
+    .form-group-name {
+      width: 55%;
     }
   }
 }
@@ -558,29 +559,6 @@ form {
   #credit-cvc {
     width: 100%;
   }
-}
-
-// form validity check
-.invalid-feedback,
-.valid-feedback {
-  display: none;
-  font-size: 0.8em;
-}
-
-.invalid-feedback {
-  color: red;
-}
-
-.valid-feedback {
-  color: green;
-}
-
-form.was-validated .form-control:invalid ~ .invalid-feedback {
-  display: initial;
-}
-
-form.was-validated .form-control:valid ~ .valid-feedback {
-  display: initial;
 }
 
 // cart
@@ -780,6 +758,7 @@ form.was-validated .form-control:valid ~ .valid-feedback {
             grid-column-end: 3;
           }
           .form-group-name {
+            width: 100%;
             grid-column-start: 3;
             grid-column-end: 7;
           }

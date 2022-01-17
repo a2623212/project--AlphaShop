@@ -61,7 +61,18 @@ function onBtnControlClick(event) {
 
   // function to control the button style
   function setBtnStyle() {
-    if 
+    if (step === 0){
+      btnPrevious.classList.add('btn-d-none')
+      
+      btnNext
+    } else if (step === 1){
+      btnDone.classList.add('btn-d-none')
+      btnNext.classList.remove('btn-d-none')
+      btnPrevious.classList.remove('btn-d-none')
+    } else if ( step === 2){
+      btnNext.classList.add('btn-d-none')
+      btnDone.classList.remove('btn-d-none')
+    }
   }
 
   // function to render Part of Cart

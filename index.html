@@ -10,6 +10,14 @@
   <body>
     <nav class="container header">
       <h1>ALPHA Shop</h1>
+      <!-- <div class="header__link">
+        <label class="header__darkmode__label" for="dark__mode__toggle"></label>
+        <input
+          type="checkbox"
+          class="header__darkmode__input"
+          id="dark__mode__toggle"
+        />
+      </div> -->
     </nav>
     <main class="container">
       <h2 id="main-title">結帳</h2>
@@ -54,10 +62,6 @@
                         placeholder="請輸入姓名"
                         required
                       />
-                      <div class="invalid-feedback">
-                        This field is required.
-                      </div>
-                      <div class="valid-feedback">Good.</div>
                     </div>
                   </div>
                   <div class="form-row-2">
@@ -72,10 +76,6 @@
                         placeholder="請輸入行動電話"
                         required
                       />
-                      <div class="invalid-feedback">
-                        This field is required.
-                      </div>
-                      <div class="valid-feedback">Good.</div>
                     </div>
                     <div class="form-group form-group-email">
                       <label for="email">Email</label>
@@ -131,10 +131,6 @@
                         placeholder="請輸入地址 "
                         required
                       />
-                      <div class="invalid-feedback">
-                        This field is required.
-                      </div>
-                      <div class="valid-feedback">Good.</div>
                     </div>
                   </div>
                 </div>
@@ -183,7 +179,6 @@
                       placeholder="John Done"
                       required
                     />
-                    <div class="invalid-feedback">This field is required.</div>
                   </div>
                   <div class="form-group">
                     <label for="credit-number">卡號</label>
@@ -245,7 +240,7 @@
           </div>
         </div>
         <div id="btn-control">
-          <button class="btn-previous arrow-previous">上一步</button>
+          <button class="btn-previous arrow-previous btn-d-none">上一步</button>
           <button class="btn-next arrow-next">下一步</button>
           <button class="btn-done checked-button btn-d-none">確認下單</button>
         </div>
