@@ -401,14 +401,14 @@ nav {
               color: $main-color;
             }
           }
-
-          .label-container {
-            display: none;
-          }
         }
       }
     }
   }
+}
+
+.label-container {
+  display: none;
 }
 
 // form
@@ -544,11 +544,14 @@ form {
 .form-part__payment {
   #credit-name,
   #credit-number {
-    width: 100%;
+    width: 350px;
   }
   > .form-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     :nth-child(1) {
-      margin-right: 30px;
+      margin-right: 2rem;
     }
   }
   #credit-expire,
@@ -666,11 +669,12 @@ form.was-validated .form-control:valid ~ .valid-feedback {
   margin-top: 1.2rem;
   position: relative;
   button {
-    display: block;
+    display: inline-block;
     border-radius: 8px;
     height: 46px;
     width: 10rem;
     text-align: center;
+    line-height: 46px;
   }
   .btn-previous {
     text-align: start;
@@ -686,9 +690,6 @@ form.was-validated .form-control:valid ~ .valid-feedback {
     position: absolute;
     top: 0;
     right: 0;
-  }
-  span {
-    line-height: 46px;
   }
 
   .arrow-previous::before {
@@ -711,5 +712,130 @@ form.was-validated .form-control:valid ~ .valid-feedback {
       " form  form form form form form  cart  cart cart cart cart "
       " form  form form form form form  cart  cart cart cart cart "
       "controlBtn controlBtn controlBtn controlBtn controlBtn controlBtn cart cart cart cart cart";
+  }
+
+  #main-content {
+    &__form {
+      &__step-control {
+        .stepper-container {
+          .step {
+            flex: 1;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .circle-container {
+              width: 24px;
+              height: 24px;
+              font-size: 12px;
+              line-height: 24px;
+            }
+            .circle--2 {
+              &::before {
+                top: 12px;
+              }
+            }
+            .circle--3 {
+              &::before {
+                top: 12px;
+              }
+            }
+          }
+          .step-center {
+            display: flex;
+            justify-content: center;
+          }
+          .step-right {
+            display: flex;
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+  }
+
+  .label-container {
+    display: inline-block;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+  }
+
+  // form--user info
+  form {
+    .form-part {
+      .select-wrapper {
+        width: 100%;
+      }
+      .form-part__address {
+        .form-row,
+        .form-row-2,
+        .form-row-3 {
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          column-gap: 1rem;
+        }
+        .form-row {
+          .form-group-title {
+            grid-column-start: 1;
+            grid-column-end: 3;
+          }
+          .form-group-name {
+            grid-column-start: 3;
+            grid-column-end: 7;
+          }
+        }
+        .form-row-2 {
+          .form-group-tel {
+            grid-column-start: 1;
+            grid-column-end: 4;
+          }
+          .form-group-email {
+            grid-column-start: 4;
+            grid-column-end: 7;
+          }
+        }
+        .form-row-3 {
+          .form-group-city {
+            grid-column-start: 1;
+            grid-column-end: 3;
+          }
+          .form-group-address {
+            grid-column-start: 3;
+            grid-column-end: 7;
+          }
+        }
+      }
+    }
+  }
+
+  // form--payment info
+  .form-part__payment {
+    > .form-row {
+      display: flex;
+      width: 100%;
+      :nth-child(1) {
+        margin-right: 0;
+        padding-right: 1rem;
+      }
+      .form-group {
+        width: 100%;
+      }
+    }
+    #credit-expire,
+    #credit-cvc {
+      width: 100%;
+    }
+  }
+
+  #btn-control {
+    .btn-next {
+      width: 10rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .btn-d-none {
+      display: none;
+    }
   }
 }

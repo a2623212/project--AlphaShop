@@ -958,7 +958,7 @@ nav h1::after {
   color: #2a2a2a;
 }
 
-#main-content__form__step-control .stepper-container .step .label-container {
+.label-container {
   display: none;
 }
 
@@ -1108,11 +1108,21 @@ form .form-part .select-wrapper::after {
 
 .form-part__payment #credit-name,
 .form-part__payment #credit-number {
+  width: 350px;
+}
+
+.form-part__payment > .form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
 }
 
 .form-part__payment > .form-row :nth-child(1) {
-  margin-right: 30px;
+  margin-right: 2rem;
 }
 
 .form-part__payment #credit-expire,
@@ -1257,11 +1267,12 @@ form.was-validated .form-control:valid ~ .valid-feedback {
 }
 
 #btn-control button {
-  display: block;
+  display: inline-block;
   border-radius: 8px;
   height: 46px;
   width: 10rem;
   text-align: center;
+  line-height: 46px;
 }
 
 #btn-control .btn-previous {
@@ -1282,10 +1293,6 @@ form.was-validated .form-control:valid ~ .valid-feedback {
   right: 0;
 }
 
-#btn-control span {
-  line-height: 46px;
-}
-
 #btn-control .arrow-previous::before {
   content: "\2190";
   font-size: 20px;
@@ -1302,6 +1309,124 @@ form.was-validated .form-control:valid ~ .valid-feedback {
   #main-content {
     grid-column-gap: 4rem;
         grid-template-areas: " form  form form form form form  cart  cart cart cart cart " " form  form form form form form  cart  cart cart cart cart " "controlBtn controlBtn controlBtn controlBtn controlBtn controlBtn cart cart cart cart cart";
+  }
+  #main-content__form__step-control .stepper-container .step {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #main-content__form__step-control .stepper-container .step .circle-container {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    line-height: 24px;
+  }
+  #main-content__form__step-control .stepper-container .step .circle--2::before {
+    top: 12px;
+  }
+  #main-content__form__step-control .stepper-container .step .circle--3::before {
+    top: 12px;
+  }
+  #main-content__form__step-control .stepper-container .step-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #main-content__form__step-control .stepper-container .step-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .label-container {
+    display: inline-block;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+  }
+  form .form-part .select-wrapper {
+    width: 100%;
+  }
+  form .form-part .form-part__address .form-row,
+  form .form-part .form-part__address .form-row-2,
+  form .form-part .form-part__address .form-row-3 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+  }
+  form .form-part .form-part__address .form-row .form-group-title {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  form .form-part .form-part__address .form-row .form-group-name {
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+    grid-column-end: 7;
+  }
+  form .form-part .form-part__address .form-row-2 .form-group-tel {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  form .form-part .form-part__address .form-row-2 .form-group-email {
+    -ms-grid-column: 4;
+        grid-column-start: 4;
+    grid-column-end: 7;
+  }
+  form .form-part .form-part__address .form-row-3 .form-group-city {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  form .form-part .form-part__address .form-row-3 .form-group-address {
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+    grid-column-end: 7;
+  }
+  .form-part__payment > .form-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .form-part__payment > .form-row :nth-child(1) {
+    margin-right: 0;
+    padding-right: 1rem;
+  }
+  .form-part__payment > .form-row .form-group {
+    width: 100%;
+  }
+  .form-part__payment #credit-expire,
+  .form-part__payment #credit-cvc {
+    width: 100%;
+  }
+  #btn-control .btn-next {
+    width: 10rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  #btn-control .btn-d-none {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
