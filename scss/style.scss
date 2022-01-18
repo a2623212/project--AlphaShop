@@ -654,6 +654,10 @@ form {
     text-align: center;
     line-height: 46px;
   }
+
+  .btn-d-none {
+    display: none;
+  }
   .btn-previous {
     text-align: start;
   }
@@ -812,9 +816,6 @@ form {
       position: absolute;
       top: 0;
       right: 0;
-    }
-    .btn-d-none {
-      display: none;
     }
   }
 }

@@ -23,9 +23,9 @@ const stepControl = document.querySelector('.stepper-container')
 const steps = document.querySelectorAll('.step')
 const formParts = document.querySelectorAll('.form-part')
 const btnControl = document.querySelector('#btn-control')
-const btnPrevious = document.querySelector('.btn-previous')
-const btnNext = document.querySelector('.btn-next')
-const btnDone = document.querySelector('.btn-done')
+const btnPrevious = document.querySelector('#btn-previous')
+const btnNext = document.querySelector('#btn-next')
+const btnDone = document.querySelector('#btn-done')
 const deliveryMethods = document.querySelector('.form-part__delivery')
 
 let step = 0
@@ -39,7 +39,7 @@ function onBtnControlClick(event) {
   event.preventDefault()
   const target = event.target
   const nowStep = steps[step]
-  if (target.className.includes('btn-next') && target.innerHTML === '下一步'){
+  if (target.className.includes('btn-next') || target.innerHTML === '下一步'){
     const nextStep = steps[step + 1]
     nowStep.classList.remove('active')
     nowStep.classList.add('checked')
@@ -63,12 +63,14 @@ function onBtnControlClick(event) {
   function setBtnStyle() {
     if (step === 0){
       btnPrevious.classList.add('btn-d-none')
-      
-      btnNext
-    } else if (step === 1){
       btnDone.classList.add('btn-d-none')
+      btnNext.classList.add('btn-next')
+    } else if (step === 1){
       btnNext.classList.remove('btn-d-none')
       btnPrevious.classList.remove('btn-d-none')
+      btnDone.classList.add('btn-d-none')
+      btnNext.classList.add('btn-done')
+      btnNext.classList.remove('btn-next')
     } else if ( step === 2){
       btnNext.classList.add('btn-d-none')
       btnDone.classList.remove('btn-d-none')

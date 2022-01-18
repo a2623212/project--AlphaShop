@@ -1257,6 +1257,10 @@ form .form-part .form-group-name {
   line-height: 46px;
 }
 
+#btn-control .btn-d-none {
+  display: none;
+}
+
 #btn-control .btn-previous {
   text-align: start;
 }
@@ -1407,9 +1411,6 @@ form .form-part .form-group-name {
     position: absolute;
     top: 0;
     right: 0;
-  }
-  #btn-control .btn-d-none {
-    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
